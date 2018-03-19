@@ -1,0 +1,54 @@
+{
+	"name" : "moon",
+	"description" : "The Moon Programming Language",
+	"copyright": "Copyright © 2018, Moon Programming Language",
+	"license": "GPL-3.0",
+	"authors": [
+		"Luís Ferreira"
+	],
+	"configurations": [
+		{
+			"name": "interpreter",
+			"targetType": "executable",
+			"targetPath": "bin",
+			"targetName": "moon",
+			"sourcePaths": [
+				"interpreter/src"
+			],
+			"importPaths": [
+				"interpreter/src"
+			],
+			"dependencies": {
+				"moon:core": "*"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"name": "core",
+			"targetType": "library",
+			"targetPath": "bin",
+			"sourcePaths": [
+				"core/src"
+			],
+			"importPaths": [
+				"core/src"
+			]
+		},
+		{
+			"name": "compiler",
+			"targetType": "executable",
+			"targetPath": "bin",
+			"targetName": "moonc",
+			"sourcePaths": [
+				"compiler/src"
+			],
+			"importPaths": [
+				"compiler/src"
+			],
+			"dependencies": {
+				"moon:core": "*"
+			}
+		}
+	]
+}
